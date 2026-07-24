@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 230" aria-hidden="true">
+  <!-- Elemento dominante da composição de referência: massa de ondas de
+       Copacabana preenchendo uma forma arredondada que afunila para baixo.
+       Fileiras entrelaçadas (deslocadas meio período), recortadas pela
+       forma. Line-art marinho, opacidade embutida (~0.04–0.06). -->
+  <defs>
+    <clipPath id="ondas-funil">
+      <path d="M18 26 Q170 -4 322 26 q14 58 -52 106 q-58 42 -100 84 q-42 -42 -100 -84 Q4 84 18 26 z"/>
+    </clipPath>
+  </defs>
+  <!-- contorno sutil da forma afunilada -->
+  <path d="M18 26 Q170 -4 322 26 q14 58 -52 106 q-58 42 -100 84 q-42 -42 -100 -84 Q4 84 18 26 z"
+        fill="none" stroke="#101f3c" stroke-opacity="0.035" stroke-width="1.2"/>
+  <g clip-path="url(#ondas-funil)" fill="none" stroke="#101f3c" stroke-width="1.2" stroke-linecap="round">
+    <path d="M-24 34 q24 -18 48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0" stroke-opacity="0.06"/>
+    <path d="M-24 34 q24 18 48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0" stroke-opacity="0.04"/>
+    <path d="M-48 66 q24 -18 48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0" stroke-opacity="0.06"/>
+    <path d="M-48 66 q24 18 48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0" stroke-opacity="0.04"/>
+    <path d="M-24 98 q24 -18 48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0" stroke-opacity="0.06"/>
+    <path d="M-24 98 q24 18 48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0" stroke-opacity="0.04"/>
+    <path d="M-48 130 q24 -18 48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0" stroke-opacity="0.06"/>
+    <path d="M-48 130 q24 18 48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0" stroke-opacity="0.04"/>
+    <path d="M-24 162 q24 -18 48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0" stroke-opacity="0.06"/>
+    <path d="M-24 162 q24 18 48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0" stroke-opacity="0.04"/>
+    <path d="M-48 194 q24 -18 48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0" stroke-opacity="0.06"/>
+    <path d="M-48 194 q24 18 48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0" stroke-opacity="0.04"/>
+  </g>
+</svg>

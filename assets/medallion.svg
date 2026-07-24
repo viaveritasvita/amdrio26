@@ -1,0 +1,81 @@
+<svg viewBox="0 0 200 200" role="img" aria-label="Medalhão AMD RCC OSM Rio de Janeiro" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="mDisc" cx="42%" cy="34%" r="75%">
+      <stop offset="0%" stop-color="#f7e5a8"/>
+      <stop offset="45%" stop-color="#dcba69"/>
+      <stop offset="80%" stop-color="#b28a3d"/>
+      <stop offset="100%" stop-color="#8a6828"/>
+    </radialGradient>
+    <linearGradient id="mRim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f3d98b"/>
+      <stop offset="50%" stop-color="#a37f36"/>
+      <stop offset="100%" stop-color="#e9cd85"/>
+    </linearGradient>
+    <!-- folha de louro -->
+    <path id="mLeaf" d="M0 0 Q3.4 -4.6 0 -10.5 Q-3.4 -4.6 0 0 Z"/>
+  </defs>
+
+  <!-- aro e disco -->
+  <circle cx="100" cy="100" r="97" fill="url(#mRim)"/>
+  <circle cx="100" cy="100" r="91" fill="url(#mDisc)"/>
+  <circle cx="100" cy="100" r="84" fill="none" stroke="#7c5f26" stroke-width="0.8" opacity="0.7"/>
+
+  <!-- coroa de louros (folhas rotacionadas ao redor do disco) -->
+  <g fill="#8a6828" opacity="0.9">
+    <use href="#mLeaf" transform="rotate(15 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(33 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(51 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(69 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(87 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(105 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(123 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(141 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(159 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(-15 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(-33 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(-51 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(-69 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(-87 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(-105 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(-123 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(-141 100 100) translate(100 23)"/>
+    <use href="#mLeaf" transform="rotate(-159 100 100) translate(100 23)"/>
+  </g>
+
+  <!-- símbolos entalhados em bronze escuro -->
+  <g fill="#5f4a1d" stroke="#5f4a1d">
+    <!-- cruz pátea central com raios -->
+    <path stroke="none" d="M100 46 L106 70 L124 62 L112 78 L134 84 L112 90 L124 106 L106 98 L100 122 L94 98 L76 106 L88 90 L66 84 L88 78 L76 62 L94 70 Z" opacity="0.28"/>
+    <path stroke="none" d="M100 54 L105.5 76 L100 82 L94.5 76 Z"/>
+    <path stroke="none" d="M100 114 L94.5 92 L100 86 L105.5 92 Z"/>
+    <path stroke="none" d="M70 84 L92 78.5 L98 84 L92 89.5 Z"/>
+    <path stroke="none" d="M130 84 L108 89.5 L102 84 L108 78.5 Z"/>
+    <circle cx="100" cy="84" r="4.6" stroke="none"/>
+
+    <!-- colunas (esquerda) -->
+    <g stroke-width="2.6" stroke-linecap="round">
+      <line x1="47" y1="74" x2="47" y2="94"/>
+      <line x1="54" y1="72" x2="54" y2="96"/>
+      <line x1="61" y1="74" x2="61" y2="94"/>
+    </g>
+    <line x1="43" y1="97.5" x2="65" y2="97.5" stroke-width="2"/>
+    <line x1="43" y1="70" x2="65" y2="70" stroke-width="2"/>
+
+    <!-- estrela hexagrama (direita) -->
+    <g fill="none" stroke-width="1.8" stroke-linejoin="round">
+      <path d="M146 71 L156 88 L136 88 Z"/>
+      <path d="M146 97 L136 80 L156 80 Z"/>
+    </g>
+  </g>
+
+  <!-- sigla -->
+  <text x="100" y="141" text-anchor="middle"
+    font-family="Cinzel, 'Times New Roman', serif" font-weight="700" font-size="14.5"
+    letter-spacing="1.5" fill="#5f4a1d">AMD · RCC · OSM</text>
+
+  <!-- listel inferior -->
+  <path d="M40 152 Q100 170 160 152 L156 166 Q100 182 44 166 Z" fill="#101f3c" stroke="#7c5f26" stroke-width="1"/>
+  <text x="100" y="164" text-anchor="middle"
+    font-family="Cinzel, 'Times New Roman', serif" font-weight="600" font-size="9.2"
+    letter-spacing="1.6" fill="#e9cd85">RIO DE JANEIRO</text>
+</svg>

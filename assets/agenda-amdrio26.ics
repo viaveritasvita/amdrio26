@@ -1,0 +1,416 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+PRODID:-//AMD RCC OSM Rio 2026//Programa Oficial//PT
+X-WR-CALNAME:Programa Oficial — AMD · RCC · OSM · Rio 2026
+X-WR-TIMEZONE:America/Sao_Paulo
+BEGIN:VEVENT
+UID:d26-1@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260826T170000Z
+DTEND:20260826T190000Z
+SUMMARY:Cerimônias Privativas Esoterismo
+LOCATION:Casa do Rito Brasileiro\, R. Fontes Castelo\, 16 – Alto da
+  Boa Vista\, Rio de Janeiro – RJ\, 20531-150
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d26-2@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260826T200000Z
+DTEND:20260827T010000Z
+SUMMARY:Cerimônias Especiais Athelstan & Acon
+LOCATION:Casa do Rito Brasileiro\, R. Fontes Castelo\, 16 – Alto da
+  Boa Vista\, Rio de Janeiro – RJ\, 20531-150
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d27-1@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260827T120000Z
+DTEND:20260827T130000Z
+SUMMARY:Buscar a delegação francesa no hotel
+LOCATION:Hotel Sesc Copacabana\, R. Domingos Ferreira\, 160 –
+  Copacabana\, Rio de Janeiro – RJ\, 22050-012
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d27-2@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260827T130000Z
+DTEND:20260827T140000Z
+SUMMARY:Apresentação do que será feito nos próximos dias
+LOCATION:Palácio Maçônico da Mariz e Barros\, R. Mariz e Barros\,
+  945 – Maracanã\, Rio de Janeiro – RJ\, 20270-004
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d27-3@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260827T140000Z
+DTEND:20260827T150000Z
+SUMMARY:Cerimônias de obrigação + Grau da Cátedra – OSM
+LOCATION:Palácio Maçônico da Mariz e Barros\, R. Mariz e Barros\,
+  945 – Maracanã\, Rio de Janeiro – RJ\, 20270-004
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d27-4@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260827T150000Z
+DTEND:20260827T163000Z
+SUMMARY:Almoço · A definir
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d27-5@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260827T163000Z
+DTEND:20260827T170000Z
+SUMMARY:Ensaio para Consagrações (OSM)
+LOCATION:Palácio Maçônico da Mariz e Barros\, R. Mariz e Barros\,
+  945 – Maracanã\, Rio de Janeiro – RJ\, 20270-004
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d27-6@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260827T170000Z
+DTEND:20260827T190000Z
+SUMMARY:Consagração de Conclaves (OSM)
+LOCATION:Palácio Maçônico da Mariz e Barros\, R. Mariz e Barros\,
+  945 – Maracanã\, Rio de Janeiro – RJ\, 20270-004
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d27-7@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260827T190000Z
+DTEND:20260827T193000Z
+SUMMARY:Cerimônias de obrigação + Grau da Cátedra – AMD
+LOCATION:Palácio Maçônico da Mariz e Barros\, R. Mariz e Barros\,
+  945 – Maracanã\, Rio de Janeiro – RJ\, 20270-004
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d27-8@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260827T193000Z
+DTEND:20260827T200000Z
+SUMMARY:Ensaio para Consagrações (AMD)
+LOCATION:Palácio Maçônico da Mariz e Barros\, R. Mariz e Barros\,
+  945 – Maracanã\, Rio de Janeiro – RJ\, 20270-004
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d27-9@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260827T200000Z
+DTEND:20260827T220000Z
+SUMMARY:Consagração de Conselhos (AMD)
+LOCATION:Palácio Maçônico da Mariz e Barros\, R. Mariz e Barros\,
+  945 – Maracanã\, Rio de Janeiro – RJ\, 20270-004
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d27-10@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260827T220000Z
+DTEND:20260827T223000Z
+SUMMARY:Cerimônias de obrigação: Red Branch of Eri – Order of St
+  Patrick
+LOCATION:Casa do Rito Brasileiro\, R. Fontes Castelo\, 16 – Alto da
+  Boa Vista\, Rio de Janeiro – RJ\, 20531-150
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d27-11@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260827T223000Z
+DTEND:20260827T233000Z
+SUMMARY:Retorno ao hotel
+LOCATION:Hotel Sesc Copacabana\, R. Domingos Ferreira\, 160 –
+  Copacabana\, Rio de Janeiro – RJ\, 22050-012
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d28-1@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260828T120000Z
+DTEND:20260828T130000Z
+SUMMARY:Buscar a delegação francesa no hotel
+LOCATION:Hotel Sesc Copacabana\, R. Domingos Ferreira\, 160 –
+  Copacabana\, Rio de Janeiro – RJ\, 22050-012
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d28-2@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260828T130000Z
+DTEND:20260828T140000Z
+SUMMARY:Cerimônias de obrigação + Graus da Cátedra – RCC
+LOCATION:Palácio Maçônico da Mariz e Barros\, R. Mariz e Barros\,
+  945 – Maracanã\, Rio de Janeiro – RJ\, 20270-004
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d28-3@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260828T140000Z
+DTEND:20260828T150000Z
+SUMMARY:Ensaio para Consagrações (RCC)
+LOCATION:Palácio Maçônico da Mariz e Barros\, R. Mariz e Barros\,
+  945 – Maracanã\, Rio de Janeiro – RJ\, 20270-004
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d28-4@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260828T150000Z
+DTEND:20260828T163000Z
+SUMMARY:Almoço · A definir
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d28-5@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260828T163000Z
+DTEND:20260828T183000Z
+SUMMARY:Consagração de Conclaves (RCC)
+LOCATION:Palácio Maçônico da Mariz e Barros\, R. Mariz e Barros\,
+  945 – Maracanã\, Rio de Janeiro – RJ\, 20270-004
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d28-6@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260828T183000Z
+DTEND:20260828T190000Z
+SUMMARY:Ensaio para Constituição do Grande Conclave (RCC)
+LOCATION:Palácio Maçônico da Mariz e Barros\, R. Mariz e Barros\,
+  945 – Maracanã\, Rio de Janeiro – RJ\, 20270-004
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d28-7@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260828T190000Z
+DTEND:20260828T210000Z
+SUMMARY:Constituição do Grande Conclave do RCC para o Rio de Janeiro
+LOCATION:Palácio Maçônico da Mariz e Barros\, R. Mariz e Barros\,
+  945 – Maracanã\, Rio de Janeiro – RJ\, 20270-004
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d28-8@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260828T210000Z
+DTEND:20260828T220000Z
+SUMMARY:Transferência para a sede do Rito Brasileiro e Café
+LOCATION:Casa do Rito Brasileiro\, R. Fontes Castelo\, 16 – Alto da
+  Boa Vista\, Rio de Janeiro – RJ\, 20531-150
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d28-9@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260828T221500Z
+DTEND:20260828T234500Z
+SUMMARY:Reunião Provincial Anual da Acon – Província da América do
+  Sul
+LOCATION:Casa do Rito Brasileiro\, R. Fontes Castelo\, 16 – Alto da
+  Boa Vista\, Rio de Janeiro – RJ\, 20531-150
+DESCRIPTION:Somente membros do Acon\nhttps://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d28-10@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260829T000000Z
+DTEND:20260829T010000Z
+SUMMARY:Reunião Provincial Anual de Athelstan – Província do Brasil
+LOCATION:Casa do Rito Brasileiro\, R. Fontes Castelo\, 16 – Alto da
+  Boa Vista\, Rio de Janeiro – RJ\, 20531-150
+DESCRIPTION:Somente membros de Athelstan\nhttps://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d28-11@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260829T010000Z
+DTEND:20260829T020000Z
+SUMMARY:Retorno ao hotel
+LOCATION:Hotel Sesc Copacabana\, R. Domingos Ferreira\, 160 –
+  Copacabana\, Rio de Janeiro – RJ\, 22050-012
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d29-1@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260829T123000Z
+DTEND:20260829T133000Z
+SUMMARY:Buscar a delegação francesa no hotel
+LOCATION:Hotel Sesc Copacabana\, R. Domingos Ferreira\, 160 –
+  Copacabana\, Rio de Janeiro – RJ\, 22050-012
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d29-2@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260829T133000Z
+DTEND:20260829T153000Z
+SUMMARY:Constituição do Grande Conclave do Secret Monitor para o
+  Rio de Janeiro
+LOCATION:Palácio Maçônico da Mariz e Barros\, R. Mariz e Barros\,
+  945 – Maracanã\, Rio de Janeiro – RJ\, 20270-004
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d29-3@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260829T153000Z
+DTEND:20260829T170000Z
+SUMMARY:Almoço · A definir
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d29-4@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260829T170000Z
+DTEND:20260829T183000Z
+SUMMARY:Retorno ao hotel – intervalo
+LOCATION:Hotel Sesc Copacabana\, R. Domingos Ferreira\, 160 –
+  Copacabana\, Rio de Janeiro – RJ\, 22050-012
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d29-5@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260829T183000Z
+DTEND:20260829T193000Z
+SUMMARY:Transferência para a AMO Rio
+LOCATION:AMORIO\, Av. Pref. Dulcídio Cardoso\, 406\, Barra da
+  Tijuca\, Rio de Janeiro – RJ\, 22620-311
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d29-6@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260829T183000Z
+DTEND:20260829T200000Z
+SUMMARY:Intervalo para café
+LOCATION:AMORIO\, Av. Pref. Dulcídio Cardoso\, 406\, Barra da
+  Tijuca\, Rio de Janeiro – RJ\, 22620-311
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d29-7@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260829T200000Z
+DTEND:20260829T230000Z
+SUMMARY:Cerimônia do 33º Grau do Rito Brasileiro e Cerimônia de
+  Premiação (Irmãos Franceses)
+LOCATION:AMORIO\, Av. Pref. Dulcídio Cardoso\, 406\, Barra da
+  Tijuca\, Rio de Janeiro – RJ\, 22620-311
+DESCRIPTION:Somente para Servidores da Pátria\, da Ordem e da
+  Humanidade\, grau 33 do Rito Brasileiro\, e irmãos grau 33 de
+  ritos coirmãos. Interessados no reconhecimento devem contatar o
+  conclave: grandesecretaria@scrb33.org.br\nhttps://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d29-8@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260829T230000Z
+DTEND:20260830T010000Z
+SUMMARY:Jantar de despedida
+LOCATION:AMORIO\, Av. Pref. Dulcídio Cardoso\, 406\, Barra da
+  Tijuca\, Rio de Janeiro – RJ\, 22620-311
+DESCRIPTION:Inscrições pelo e-mail
+  grandesecretaria@scrb33.org.br\nhttps://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d29-9@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260830T010000Z
+DTEND:20260830T020000Z
+SUMMARY:Retorno ao hotel
+LOCATION:Hotel Sesc Copacabana\, R. Domingos Ferreira\, 160 –
+  Copacabana\, Rio de Janeiro – RJ\, 22050-012
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d30-1@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260830T123000Z
+DTEND:20260830T133000Z
+SUMMARY:Buscar a delegação francesa no hotel
+LOCATION:Hotel Sesc Copacabana\, R. Domingos Ferreira\, 160 –
+  Copacabana\, Rio de Janeiro – RJ\, 22050-012
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d30-2@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260830T133000Z
+DTEND:20260830T153000Z
+SUMMARY:Constituição do Grande Conselho de Allied Masonic Degrees
+  para o Rio de Janeiro
+LOCATION:Palácio Maçônico da Mariz e Barros\, R. Mariz e Barros\,
+  945 – Maracanã\, Rio de Janeiro – RJ\, 20270-004
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d30-3@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260830T153000Z
+DTEND:20260830T170000Z
+SUMMARY:Almoço · A definir
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+BEGIN:VEVENT
+UID:d30-4@amdrio26
+DTSTAMP:20260724T120000Z
+DTSTART:20260830T170000Z
+DTEND:20260830T180000Z
+SUMMARY:Retorno ao hotel
+LOCATION:Hotel Sesc Copacabana\, R. Domingos Ferreira\, 160 –
+  Copacabana\, Rio de Janeiro – RJ\, 22050-012
+DESCRIPTION:https://tinyurl.com/amdrio26
+URL:https://viaveritasvita.github.io/amdrio26/
+END:VEVENT
+END:VCALENDAR

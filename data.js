@@ -30,6 +30,11 @@ const SITE_CONFIG = {
   // falhar), o site usa os dados embutidos abaixo + avisos.json — nada quebra.
   sheetProgramacaoCsvUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSwmcYsZG0STetIPP0wmTnZIyWJ2mDv7FXPtfHbgSWdFZWPTrHkmhUxi_ZwB_F6ezHQAuzOd_-jRhMf/pub?gid=192383127&single=true&output=csv',
   sheetAvisosCsvUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSwmcYsZG0STetIPP0wmTnZIyWJ2mDv7FXPtfHbgSWdFZWPTrHkmhUxi_ZwB_F6ezHQAuzOd_-jRhMf/pub?gid=0&single=true&output=csv',
+
+  // Feed .ics AO VIVO (Google Apps Script da planilha) para a ASSINATURA da
+  // agenda completa. Se preenchido, a assinatura reflete a planilha em tempo real.
+  // Vazio = usa o arquivo estático assets/agenda-amdrio26.ics (fotografia).
+  icsFeedUrl: 'https://script.google.com/macros/s/AKfycbwq44tzVqrY5zHR2-MtZGP3uwD5XhZxmvlu1aVLwvdJBCs2nV-27sIj7WcvHM7Dfev8/exec',
 };
 
 const EVENT_INFO = {

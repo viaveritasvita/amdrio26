@@ -1,0 +1,18 @@
+<svg viewBox="0 0 800 110" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#c9a24b" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- ponte Rio–Niterói -->
+  <path d="M14 92 H186" opacity="0.85"/>
+  <path d="M62 92 V58 M57 58 h10 M142 92 V58 M137 58 h10"/>
+  <path d="M22 90 Q62 60 102 89 Q142 60 182 90" opacity="0.8"/>
+  <!-- casario -->
+  <path d="M210 92 V76 h13 V92 M233 92 V68 h11 V92 M254 92 V79 h12 V92 M276 92 V72 h10 V92 M296 92 V82 h11 V92" opacity="0.75"/>
+  <!-- Corcovado com o Cristo -->
+  <path d="M340 92 Q392 58 424 50 Q436 48 444 54 Q462 66 486 92"/>
+  <path d="M430 50 V33 M419 39 H441 M430 33 q-2.6 -1.4 -2.6 -3.4 a2.6 2.6 0 1 1 5.2 0 q0 2 -2.6 3.4"/>
+  <!-- morros e Pão de Açúcar -->
+  <path d="M500 92 Q528 74 548 78 Q568 60 588 78 Q600 84 612 92" opacity="0.8"/>
+  <path d="M612 92 Q628 86 636 64 Q643 42 656 44 Q668 46 672 66 Q678 86 696 92"/>
+  <!-- palmeira imperial -->
+  <path d="M726 92 Q729 74 726 62 M726 62 Q714 58 708 64 M726 62 Q738 58 744 64 M726 62 Q716 50 710 52 M726 62 Q736 50 742 52 M726 62 Q726 48 722 46"/>
+  <!-- linha do mar -->
+  <path d="M0 100 H800" opacity="0.5"/>
+</svg>

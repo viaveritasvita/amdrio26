@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 220" aria-hidden="true">
+  <!-- Cristo Redentor de braços abertos sobre o morro arredondado do
+       Corcovado, com a cadeia de montanhas em camadas ao fundo.
+       Line-art marinho, opacidade embutida (~0.05–0.07). -->
+  <g fill="none" stroke="#101f3c" stroke-opacity="0.07" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- cabeça -->
+    <path d="M130 34 q-4.2 -2.4 -4.2 -5.8 a4.2 4.2 0 1 1 8.4 0 q0 3.4 -4.2 5.8"/>
+    <!-- corpo -->
+    <path d="M130 34 v50"/>
+    <!-- braços abertos, leve queda nas pontas (silhueta clássica) -->
+    <path d="M88 52 q42 -12 84 0"/>
+    <path d="M88 52 l-1 6 M172 52 l1 6"/>
+    <!-- túnica que abre na base -->
+    <path d="M121 84 h18 l4 12 h-26 z"/>
+    <!-- pedestal -->
+    <path d="M124 96 h12 v8 h-12 z" stroke-width="1.1"/>
+    <!-- morro arredondado do Corcovado -->
+    <path d="M56 168 q74 -78 148 0"/>
+    <!-- vegetação sugerida no morro -->
+    <g stroke-width="0.9" stroke-opacity="0.045">
+      <path d="M92 150 l-11 18"/>
+      <path d="M112 132 l-13 26"/>
+      <path d="M148 132 l13 24"/>
+      <path d="M170 148 l11 18"/>
+    </g>
+    <!-- cadeia de montanhas em camadas, ao fundo -->
+    <path d="M6 196 q52 -46 104 -36" stroke-opacity="0.05"/>
+    <path d="M148 162 q60 -14 106 42" stroke-opacity="0.05"/>
+    <path d="M-8 216 q70 -52 140 -42 q66 8 130 50" stroke-opacity="0.038"/>
+  </g>
+</svg>

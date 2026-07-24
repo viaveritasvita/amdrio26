@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="140" viewBox="0 0 240 140" aria-hidden="true">
+  <!-- Ondas do calçadão de Copacabana — tile repetível, fio condutor da
+       identidade. Curvas sinuosas entrelaçadas (crista + contracrista),
+       segunda fileira deslocada meio período para o entrelaçamento.
+       Opacidade embutida (~0.035–0.055): "papel gravado", nunca disputa
+       com o texto. -->
+  <g fill="none" stroke="#101f3c" stroke-width="1.2" stroke-linecap="round">
+    <path d="M-30 32 q30 -22 60 0 t60 0 t60 0 t60 0 t60 0" stroke-opacity="0.055"/>
+    <path d="M-30 32 q30 22 60 0 t60 0 t60 0 t60 0 t60 0" stroke-opacity="0.035"/>
+    <path d="M-60 102 q30 -22 60 0 t60 0 t60 0 t60 0 t60 0 t60 0" stroke-opacity="0.055"/>
+    <path d="M-60 102 q30 22 60 0 t60 0 t60 0 t60 0 t60 0 t60 0" stroke-opacity="0.035"/>
+  </g>
+</svg>

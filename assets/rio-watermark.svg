@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" aria-hidden="true">
+  <!-- Gravura sutil do Rio: traço fino em marinho.
+       A opacidade final é controlada pelo CSS (.masthead::before). -->
+  <g fill="none" stroke="#274a78" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- ===== Cristo Redentor no Corcovado (alto, à direita) ===== -->
+    <g>
+      <path d="M712 96 q-4 -2.2 -4 -5.6 a4 4 0 1 1 8 0 q0 3.4 -4 5.6"/>
+      <path d="M712 96 v46"/>
+      <path d="M676 112 h72"/>
+      <path d="M676 112 v5 M748 112 v5"/>
+      <path d="M704 142 h16 l3 10 h-22 z"/>
+    </g>
+    <path d="M646 214 q34 -54 62 -61 q30 6 66 61" stroke-width="1.3"/>
+    <path d="M614 258 q44 -62 98 -70 q56 8 106 72" stroke-opacity="0.65" stroke-width="1"/>
+    <g stroke-width="0.75" stroke-opacity="0.5">
+      <path d="M672 206 l-10 20"/>
+      <path d="M690 190 l-13 26"/>
+      <path d="M724 190 l12 24"/>
+      <path d="M748 206 l10 18"/>
+    </g>
+
+    <!-- ===== Pão de Açúcar + Morro da Urca (esquerda) ===== -->
+    <path d="M64 340 q22 -110 62 -118 q40 10 58 118" stroke-width="1.4"/>
+    <path d="M184 340 q16 -44 40 -50 q26 6 44 50"/>
+    <g stroke-width="0.75" stroke-opacity="0.5">
+      <path d="M104 250 l-12 44"/>
+      <path d="M126 232 l-8 52"/>
+      <path d="M150 246 l10 44"/>
+      <path d="M212 306 l-6 24"/>
+      <path d="M238 302 l8 26"/>
+    </g>
+    <!-- bondinho -->
+    <path d="M128 224 L332 168" stroke-width="0.8" stroke-opacity="0.7" stroke-dasharray="3 5"/>
+    <rect x="222" y="192" width="12" height="9" rx="2" stroke-width="0.9"/>
+    <path d="M228 192 v-6" stroke-width="0.8"/>
+
+    <!-- ===== baía: linhas d'água e veleiro ===== -->
+    <g stroke-opacity="0.6" stroke-width="0.9">
+      <path d="M60 372 q30 -6 60 0 t60 0 t60 0 t60 0"/>
+      <path d="M140 392 q30 -6 60 0 t60 0 t60 0"/>
+      <path d="M420 372 q30 -6 60 0 t60 0"/>
+      <path d="M560 388 q30 -6 60 0 t60 0 t60 0"/>
+      <path d="M700 368 q30 -6 60 0 t60 0"/>
+    </g>
+    <g stroke-width="1">
+      <path d="M472 350 h34 l-6 9 h-23 z"/>
+      <path d="M488 350 v-26 l-16 26 z"/>
+      <path d="M490 324 l14 26"/>
+    </g>
+
+    <!-- gaivotas -->
+    <g stroke-width="0.9" stroke-opacity="0.7">
+      <path d="M400 160 q5 -6 10 0 q5 -6 10 0"/>
+      <path d="M448 184 q4 -5 8 0 q4 -5 8 0"/>
+      <path d="M540 140 q4 -5 8 0 q4 -5 8 0"/>
+    </g>
+
+    <!-- ===== calçadão de Copacabana (ondas) ===== -->
+    <g stroke-width="1.1">
+      <path d="M40 470 q28 -26 56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0"/>
+      <path d="M40 470 q28 26 56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0" stroke-opacity="0.55"/>
+      <path d="M12 508 q28 -26 56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0" stroke-opacity="0.4"/>
+    </g>
+
+    <!-- ===== palmeira imperial (direita) ===== -->
+    <g stroke-width="1.1">
+      <path d="M826 452 q6 -44 -2 -76"/>
+      <path d="M824 376 q-26 -10 -40 4"/>
+      <path d="M824 376 q26 -10 40 4"/>
+      <path d="M824 376 q-22 -26 -36 -22"/>
+      <path d="M824 376 q22 -26 36 -22"/>
+      <path d="M824 376 q-4 -30 -14 -36"/>
+      <path d="M824 376 q6 -30 14 -36"/>
+    </g>
+  </g>
+</svg>

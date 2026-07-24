@@ -887,7 +887,10 @@
        publicado em assets/agenda-amdrio26.ics (regerar se a grade mudar —
        ver README-SETUP.md). O Google não aceita múltiplos eventos por link
        template; a assinatura via webcal:// cobre a programação inteira. */
-    const icsFeedUrl = 'webcal://' + SITE_CONFIG.siteUrl.replace(/^https?:\/\//, '') + 'assets/agenda-amdrio26.ics';
+    const feedHttp = (SITE_CONFIG.icsFeedUrl && /^https?:\/\//.test(SITE_CONFIG.icsFeedUrl))
+      ? SITE_CONFIG.icsFeedUrl
+      : SITE_CONFIG.siteUrl + 'assets/agenda-amdrio26.ics';
+    const icsFeedUrl = 'webcal://' + feedHttp.replace(/^https?:\/\//, '');
     $('#gcalAll').href = 'https://calendar.google.com/calendar/render?cid=' + encodeURIComponent(icsFeedUrl);
 
     /* Planilha do Google ANTES da primeira renderização.
