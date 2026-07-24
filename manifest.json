@@ -1,0 +1,26 @@
+{
+  "name": "Programa Oficial — AMD · RCC · OSM · Rio 2026",
+  "short_name": "AMD Rio 26",
+  "description": "Programa Oficial — AMD · RCC · OSM · Rio de Janeiro · 27–30 de agosto de 2026",
+  "lang": "pt-BR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fdfbf7",
+  "theme_color": "#fdfbf7",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

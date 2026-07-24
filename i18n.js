@@ -1,0 +1,228 @@
+/* ============================================================
+   i18n.js — TEXTOS DE INTERFACE (PT / FR / EN)
+   Termos maçônicos sensíveis: ver README-SETUP.md → "Revisão
+   fraterna das traduções". Nomes próprios de corpos não se
+   traduzem (AMD, RCC, OSM, Acon, Athelstan, Red Branch of Eri,
+   Order of St Patrick, Secret Monitor, Allied Masonic Degrees).
+   ============================================================ */
+
+const I18N = {
+  pt: {
+    langName: 'Português',
+    docTitle: 'Programa Oficial — AMD · RCC · OSM · Rio de Janeiro 2026',
+    eyebrow: 'Rio de Janeiro · Brasil',
+    programTitle: 'Programa Oficial',
+    datesPlaque: '27–30 de agosto de 2026',
+    motto1: 'Conhecer · Conectar · Transformar',
+    motto2: 'Por uma Maçonaria forte e unida',
+
+    weekdays: { wed: 'Quarta-feira', thu: 'Quinta-feira', fri: 'Sexta-feira', sat: 'Sábado', sun: 'Domingo' },
+    weekdaysShort: { wed: 'Qua', thu: 'Qui', fri: 'Sex', sat: 'Sáb', sun: 'Dom' },
+    monthShort: 'ago',
+    dayOfMonthLabel: 'de agosto',
+
+    now: 'Agora',
+    next: 'A seguir',
+    startsIn: 'começa em',
+    endsIn: 'termina em',
+    openingCountdown: 'Contagem para a abertura oficial',
+    openingDate: 'Quinta-feira, 27 de agosto · 10h',
+    closedTitle: 'Trabalhos encerrados',
+    closedMsg: 'O encontro do Rio de Janeiro cumpriu a sua jornada. Gratidão a todos os irmãos que conheceram, conectaram e transformaram.',
+    days: 'd', hours: 'h', minutes: 'min', seconds: 's',
+
+    tabsLabel: 'Dias do evento',
+    viewAll: 'Programação completa',
+    viewMine: 'Meu roteiro',
+    emptyMine: 'O seu roteiro ainda está vazio. Toque na estrela de uma sessão para guardá-la aqui.',
+    vesperTag: 'cerimônias preliminares · véspera',
+    tabVesperMini: 'preliminares',
+
+    legendTitle: 'Legenda de cores por rito',
+    legendLogistics: 'Traslados e refeições',
+
+    inProgress: 'em curso',
+    restrictedLabel: 'Sessão restrita',
+    noteLabel: 'Observação',
+    openMap: 'Abrir no mapa',
+    gcalBtn: 'Google Agenda',
+    icsBtn: 'Baixar (.ics)',
+    addAllToCalendar: 'Agenda (.ics)',
+    addAllToCalendarLong: 'Baixar agenda completa (.ics)',
+    favAdd: 'Adicionar ao meu roteiro',
+    favRemove: 'Remover do meu roteiro',
+    toBeDefined: 'Local a definir',
+
+    locationsTitle: 'Locais',
+    locationsSub: 'Os quatro endereços do encontro',
+    addressLabel: 'Endereço',
+
+    noticesTitle: 'Aviso da organização',
+    dismissNotice: 'Dispensar aviso',
+    /* usado APENAS no modo de pré-visualização (?demo=1) */
+    demoNoticeText: 'Exemplo de aviso (demonstração): o almoço de hoje será às 12h30 no Palácio Mariz e Barros.',
+    pushBtn: 'Receber avisos',
+    pushGranted: 'Avisos ativados',
+    pushDenied: 'Avisos bloqueados no navegador',
+    whatsappBtn: 'Avisos no WhatsApp',
+    installBtn: 'Instalar app',
+    shareBtn: 'Compartilhar',
+    shareText: 'Programa Oficial — AMD · RCC · OSM · Rio de Janeiro, 27–30 de agosto de 2026',
+    linkCopied: 'Link copiado',
+    icsReady: 'Arquivo de agenda gerado',
+
+    emergencyLabel: 'Emergências',
+    emergencyAria: 'Ligar para o telefone de emergência',
+    contactTitle: 'Contato',
+    registrationEmailLabel: 'Inscrições e reconhecimento',
+
+    offlineReady: 'Disponível offline',
+    footerNote: 'Aplicativo oficial do encontro · funciona offline',
+  },
+
+  fr: {
+    langName: 'Français',
+    docTitle: 'Programme Officiel — AMD · RCC · OSM · Rio de Janeiro 2026',
+    eyebrow: 'Rio de Janeiro · Brésil',
+    programTitle: 'Programme Officiel',
+    datesPlaque: '27–30 août 2026',
+    motto1: 'Connaître · Connecter · Transformer',
+    motto2: 'Pour une Franc-maçonnerie forte et unie',
+
+    weekdays: { wed: 'Mercredi', thu: 'Jeudi', fri: 'Vendredi', sat: 'Samedi', sun: 'Dimanche' },
+    weekdaysShort: { wed: 'Mer', thu: 'Jeu', fri: 'Ven', sat: 'Sam', sun: 'Dim' },
+    monthShort: 'août',
+    dayOfMonthLabel: 'août',
+
+    now: 'En ce moment',
+    next: 'À suivre',
+    startsIn: 'commence dans',
+    endsIn: 'se termine dans',
+    openingCountdown: 'Compte à rebours vers l’ouverture officielle',
+    openingDate: 'Jeudi 27 août · 10 h',
+    closedTitle: 'Travaux clos',
+    closedMsg: 'La rencontre de Rio de Janeiro a accompli son chemin. Gratitude à tous les frères qui ont connu, connecté et transformé.',
+    days: 'j', hours: 'h', minutes: 'min', seconds: 's',
+
+    tabsLabel: 'Jours de l’événement',
+    viewAll: 'Programme complet',
+    viewMine: 'Mon parcours',
+    emptyMine: 'Votre parcours est encore vide. Touchez l’étoile d’une séance pour la garder ici.',
+    vesperTag: 'cérémonies préliminaires · veille',
+    tabVesperMini: 'préliminaires',
+
+    legendTitle: 'Légende des couleurs par rite',
+    legendLogistics: 'Transferts et repas',
+
+    inProgress: 'en cours',
+    restrictedLabel: 'Séance réservée',
+    noteLabel: 'Remarque',
+    openMap: 'Ouvrir la carte',
+    gcalBtn: 'Google Agenda',
+    icsBtn: 'Télécharger (.ics)',
+    addAllToCalendar: 'Agenda (.ics)',
+    addAllToCalendarLong: 'Télécharger tout l’agenda (.ics)',
+    favAdd: 'Ajouter à mon parcours',
+    favRemove: 'Retirer de mon parcours',
+    toBeDefined: 'Lieu à définir',
+
+    locationsTitle: 'Lieux',
+    locationsSub: 'Les quatre adresses de la rencontre',
+    addressLabel: 'Adresse',
+
+    noticesTitle: 'Avis de l’organisation',
+    dismissNotice: 'Fermer l’avis',
+    /* utilisé UNIQUEMENT en mode aperçu (?demo=1) */
+    demoNoticeText: 'Exemple d’avis (démonstration) : le déjeuner d’aujourd’hui aura lieu à 12 h 30 au Palais Mariz e Barros.',
+    pushBtn: 'Recevoir les avis',
+    pushGranted: 'Avis activés',
+    pushDenied: 'Avis bloqués par le navigateur',
+    whatsappBtn: 'Avis sur WhatsApp',
+    installBtn: 'Installer l’application',
+    shareBtn: 'Partager',
+    shareText: 'Programme Officiel — AMD · RCC · OSM · Rio de Janeiro, 27–30 août 2026',
+    linkCopied: 'Lien copié',
+    icsReady: 'Fichier d’agenda généré',
+
+    emergencyLabel: 'Urgences',
+    emergencyAria: 'Appeler le numéro d’urgence',
+    contactTitle: 'Contact',
+    registrationEmailLabel: 'Inscriptions et reconnaissance',
+
+    offlineReady: 'Disponible hors ligne',
+    footerNote: 'Application officielle de la rencontre · fonctionne hors ligne',
+  },
+
+  en: {
+    langName: 'English',
+    docTitle: 'Official Programme — AMD · RCC · OSM · Rio de Janeiro 2026',
+    eyebrow: 'Rio de Janeiro · Brazil',
+    programTitle: 'Official Programme',
+    datesPlaque: 'August 27–30, 2026',
+    motto1: 'To Know · To Connect · To Transform',
+    motto2: 'For a strong and united Freemasonry',
+
+    weekdays: { wed: 'Wednesday', thu: 'Thursday', fri: 'Friday', sat: 'Saturday', sun: 'Sunday' },
+    weekdaysShort: { wed: 'Wed', thu: 'Thu', fri: 'Fri', sat: 'Sat', sun: 'Sun' },
+    monthShort: 'Aug',
+    dayOfMonthLabel: 'August',
+
+    now: 'Happening now',
+    next: 'Up next',
+    startsIn: 'starts in',
+    endsIn: 'ends in',
+    openingCountdown: 'Countdown to the official opening',
+    openingDate: 'Thursday, August 27 · 10 am',
+    closedTitle: 'Labours closed',
+    closedMsg: 'The Rio de Janeiro gathering has completed its journey. Gratitude to all the brethren who came to know, to connect and to transform.',
+    days: 'd', hours: 'h', minutes: 'min', seconds: 's',
+
+    tabsLabel: 'Event days',
+    viewAll: 'Full programme',
+    viewMine: 'My itinerary',
+    emptyMine: 'Your itinerary is still empty. Tap the star on a session to keep it here.',
+    vesperTag: 'preliminary ceremonies · eve',
+    tabVesperMini: 'preliminary',
+
+    legendTitle: 'Colour key by rite',
+    legendLogistics: 'Transfers and meals',
+
+    inProgress: 'in progress',
+    restrictedLabel: 'Restricted session',
+    noteLabel: 'Note',
+    openMap: 'Open map',
+    gcalBtn: 'Google Calendar',
+    icsBtn: 'Download (.ics)',
+    addAllToCalendar: 'Calendar (.ics)',
+    addAllToCalendarLong: 'Download full calendar (.ics)',
+    favAdd: 'Add to my itinerary',
+    favRemove: 'Remove from my itinerary',
+    toBeDefined: 'Venue to be defined',
+
+    locationsTitle: 'Venues',
+    locationsSub: 'The four addresses of the gathering',
+    addressLabel: 'Address',
+
+    noticesTitle: 'Notice from the organisers',
+    dismissNotice: 'Dismiss notice',
+    /* used ONLY in preview mode (?demo=1) */
+    demoNoticeText: 'Sample notice (demo): today’s lunch will be at 12:30 pm at the Mariz e Barros Palace.',
+    pushBtn: 'Receive alerts',
+    pushGranted: 'Alerts enabled',
+    pushDenied: 'Alerts blocked by the browser',
+    whatsappBtn: 'WhatsApp alerts',
+    installBtn: 'Install app',
+    shareBtn: 'Share',
+    shareText: 'Official Programme — AMD · RCC · OSM · Rio de Janeiro, August 27–30, 2026',
+    linkCopied: 'Link copied',
+    icsReady: 'Calendar file generated',
+
+    emergencyLabel: 'Emergencies',
+    emergencyAria: 'Call the emergency number',
+    contactTitle: 'Contact',
+    registrationEmailLabel: 'Registration and recognition',
+
+    offlineReady: 'Available offline',
+    footerNote: 'Official app of the gathering · works offline',
+  },
+};

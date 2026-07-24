@@ -1,0 +1,16 @@
+{
+  "_como_usar": "Para publicar um aviso: adicione um objeto em 'avisos' com id NOVO e único, ativo=true, e faça commit/push no GitHub. O site verifica este arquivo a cada abertura. Para retirar um aviso, mude ativo para false. O aviso mais recente (publicadoEm) é exibido primeiro. 'link' é opcional.",
+  "avisos": [
+    {
+      "id": "2026-08-20-exemplo",
+      "ativo": false,
+      "publicadoEm": "2026-08-20T12:00:00-03:00",
+      "texto": {
+        "pt": "Exemplo de aviso: o traslado de quinta-feira sairá do hotel às 9h em ponto.",
+        "fr": "Exemple d’avis : le transfert de jeudi partira de l’hôtel à 9 h précises.",
+        "en": "Sample notice: Thursday’s transfer will leave the hotel at 9:00 sharp."
+      },
+      "link": ""
+    }
+  ]
+}
