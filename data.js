@@ -59,27 +59,25 @@ const LOCATIONS = {
     name: 'Palácio Maçônico da Mariz e Barros',
     detail: 'Condomínio Maçônico Antônio Rodrigues Lopes',
     address: 'R. Mariz e Barros, 945 – Maracanã, Rio de Janeiro – RJ, 20270-004',
-    map: 'https://share.google/ZIct3AWBjTpYZtteW',
+    coords: '-22.9169956,-43.2224141',
   },
   casa: {
     name: 'Casa do Rito Brasileiro',
     detail: '',
     address: 'R. Fontes Castelo, 16 – Alto da Boa Vista, Rio de Janeiro – RJ, 20531-150',
-    map: 'https://share.google/UWQQT32djId0K7zEp',
+    coords: '-22.9475534,-43.2586994',
   },
   hotel: {
     name: 'Hotel Sesc Copacabana',
     detail: '',
     address: 'R. Domingos Ferreira, 160 – Copacabana, Rio de Janeiro – RJ, 22050-012',
-    /* Sem link share — busca no Google Maps pelo endereço */
-    map: 'https://www.google.com/maps/search/?api=1&query=' +
-         encodeURIComponent('Hotel Sesc Copacabana, R. Domingos Ferreira, 160, Copacabana, Rio de Janeiro'),
+    coords: '-22.9731655,-43.1874073',
   },
   amorio: {
     name: 'AMORIO',
     detail: '',
     address: 'Av. Pref. Dulcídio Cardoso, 406, Barra da Tijuca, Rio de Janeiro – RJ, 22620-311',
-    map: 'https://share.google/D57HCj1YYfcY3RIWI',
+    coords: '-23.0065437,-43.3846825',
   },
 };
 

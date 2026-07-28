@@ -20,7 +20,7 @@ try {
   /* sem rede na instalação: apenas offline, sem push */
 }
 
-const CACHE = 'amdrio26-v22';
+const CACHE = 'amdrio26-v23';
 
 const APP_SHELL = [
   './',
