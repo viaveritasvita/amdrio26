@@ -20,7 +20,7 @@ try {
   /* sem rede na instalação: apenas offline, sem push */
 }
 
-const CACHE = 'amdrio26-v20';
+const CACHE = 'amdrio26-v21';
 
 const APP_SHELL = [
   './',
@@ -33,8 +33,11 @@ const APP_SHELL = [
   './avisos.json',
   /* agenda completa estática (assinatura Google Agenda) — regerar se a grade mudar */
   './assets/agenda-amdrio26.ics',
-  './assets/icon.svg',
-  './assets/icon-maskable.svg',
+  './assets/app-icon-192.png',
+  './assets/app-icon-512.png',
+  './assets/app-icon-maskable-512.png',
+  './assets/apple-touch-icon.png',
+  './assets/favicon-48.png',
   /* brasão oficial (PNG) + fallback SVG */
   './assets/medalhao.png',
   './assets/medallion.svg',
