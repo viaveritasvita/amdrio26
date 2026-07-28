@@ -14,7 +14,7 @@ const SITE_CONFIG = {
   shortUrl: 'https://tinyurl.com/amdrio26',
 
   // >>> PLACEHOLDER 1: App ID do OneSignal (painel OneSignal → Settings → Keys & IDs)
-  oneSignalAppId: 'COLE_SEU_ONESIGNAL_APP_ID_AQUI',
+  oneSignalAppId: '9d7b5742-cb8c-4965-8ed6-142a509f5924',
 
   // >>> PLACEHOLDER 2: link do canal/grupo de avisos no WhatsApp
   // Grupo:  https://chat.whatsapp.com/CODIGO_DO_CONVITE

@@ -81,6 +81,7 @@
   let viewMode = 'all'; // 'all' | 'mine'
   let favs = loadFavs();
   let deferredInstall = null;
+  let pushState = 'idle'; // 'idle' | 'on' | 'blocked' — estado refletido no botão "Receber avisos"
 
   function detectLang() {
     const saved = localStorage.getItem(LS.lang);
@@ -193,6 +194,7 @@
     renderSchedule();
     renderLocations();
     updateNowCard();
+    if (installModalMode) renderInstallModal(); // modal aberto acompanha o idioma
     if (DEMO) renderDemoNotice();
   }
 
@@ -216,8 +218,9 @@
     $('#emergencyFab').setAttribute('aria-label', t('emergencyAria') + ' ' + EVENT_INFO.emergencyDisplay);
     $('#fabLabel').textContent = t('emergencyLabel');
 
-    // Barra de ações
-    $('#btnPush .btn-label').textContent = t('pushBtn');
+    // Barra de ações (o rótulo do push acompanha o estado atual)
+    $('#btnPush .btn-label').textContent =
+      t(pushState === 'on' ? 'pushGranted' : pushState === 'blocked' ? 'pushDenied' : 'pushBtn');
     $('#btnWhatsapp .btn-label').textContent = t('whatsappBtn');
     $('#btnInstall .btn-label').textContent = t('installBtn');
     $('#btnShare .btn-label').textContent = t('shareBtn');
@@ -778,14 +781,165 @@
   }
 
   /* ============================================================
+     PLATAFORMA — detecção robusta para o fluxo de instalação
+     ------------------------------------------------------------
+     iOS: userAgent clássico OU iPadOS "disfarçado" de Mac
+     (Macintosh + tela de toque). Safari no iOS: exclui os demais
+     navegadores (CriOS/FxiOS/EdgiOS/...), que no iPhone não podem
+     instalar PWA — só o Safari instala.
+     ============================================================ */
+  const UA = navigator.userAgent;
+  const IS_IOS = /iPad|iPhone|iPod/.test(UA) ||
+    (/Macintosh/.test(UA) && navigator.maxTouchPoints > 1);
+  const IS_ANDROID = /Android/i.test(UA);
+  const IS_STANDALONE =
+    (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+    (typeof navigator.standalone !== 'undefined' && navigator.standalone === true);
+  const IS_IOS_SAFARI = IS_IOS && /Safari\//.test(UA) &&
+    !/CriOS|FxiOS|EdgiOS|OPiOS|OPT\/|YaBrowser|DuckDuckGo|GSA\/|Instagram|FBAN|FBAV|Line\//.test(UA);
+
+  /* Captura IMEDIATA do prompt nativo (Android/Chrome/Edge): o evento
+     pode disparar antes do arranque completo (initPWA) — guardar já. */
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredInstall = e;
+    const btn = document.getElementById('btnInstall');
+    if (btn && !IS_STANDALONE) btn.hidden = false;
+  });
+
+  /* ============================================================
+     MODAL DE INSTALAÇÃO — passo a passo ilustrado (iOS/Android)
+     Acessível: fechável por ×, Esc e overlay; foco preso no diálogo;
+     foco devolvido ao botão que abriu. Traduzido via i18n.js.
+     ============================================================ */
+  const INSTALL_ICONS = {
+    /* ícone Compartilhar do iOS: quadrado com seta para cima */
+    share: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M8.5 6.5 12 3l3.5 3.5"/><path d="M7.5 10H6a1.8 1.8 0 0 0-1.8 1.8v7.4A1.8 1.8 0 0 0 6 21h12a1.8 1.8 0 0 0 1.8-1.8v-7.4A1.8 1.8 0 0 0 18 10h-1.5"/></svg>',
+    /* "Adicionar à Tela de Início": quadrado arredondado com + */
+    add: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8.5v7M8.5 12h7"/></svg>',
+    /* confirmação */
+    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>',
+    /* bússola do Safari */
+    safari: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m14.9 9.1-1.8 4-4 1.8 1.8-4z"/></svg>',
+    /* menu ⋮ dos navegadores Android */
+    menu: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="5" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="12" cy="19" r="1.7"/></svg>',
+  };
+
+  /* **negrito** nas cadeias do i18n → <strong> (com escape prévio) */
+  const fmtRich = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+
+  let installModalMode = null;   // 'ios' | 'ios-other' | 'android' | null (fechado)
+  let installModalFromPush = false;
+  let installModalTrigger = null;
+
+  function renderInstallModal() {
+    const modal = $('#installModal');
+    if (!installModalMode) return;
+
+    const shortDisplay = String(SITE_CONFIG.shortUrl || SITE_CONFIG.siteUrl).replace(/^https?:\/\//, '');
+    let intro = '', steps = '', note = '';
+
+    if (installModalMode === 'ios') {
+      intro = fmtRich(t('installIntroIOS'));
+      steps =
+        `<li><span class="install-step-icon">${INSTALL_ICONS.share}</span><p>${fmtRich(t('iosStep1'))}</p></li>` +
+        `<li><span class="install-step-icon">${INSTALL_ICONS.add}</span><p>${fmtRich(t('iosStep2'))}</p></li>` +
+        `<li><span class="install-step-icon">${INSTALL_ICONS.check}</span><p>${fmtRich(t('iosStep3'))}</p></li>`;
+      note = fmtRich(t(installModalFromPush ? 'pushAfterInstall' : 'iosPushNote'));
+    } else if (installModalMode === 'ios-other') {
+      intro = fmtRich(t('iosOtherIntro'));
+      steps =
+        `<li><span class="install-step-icon">${INSTALL_ICONS.safari}</span><p>${fmtRich(t('iosOtherStep1').replace('{url}', shortDisplay))}</p></li>` +
+        `<li><span class="install-step-icon">${INSTALL_ICONS.add}</span><p>${fmtRich(t('iosOtherStep2'))}</p></li>`;
+      note = fmtRich(t(installModalFromPush ? 'pushAfterInstall' : 'iosPushNote'));
+    } else { /* 'android' — sem beforeinstallprompt disponível */
+      intro = fmtRich(t('androidIntro'));
+      steps =
+        `<li><span class="install-step-icon">${INSTALL_ICONS.menu}</span><p>${fmtRich(t('androidStep1'))}</p></li>` +
+        `<li><span class="install-step-icon">${INSTALL_ICONS.add}</span><p>${fmtRich(t('androidStep2'))}</p></li>`;
+    }
+
+    modal.innerHTML = `
+      <div class="install-overlay" data-close-install></div>
+      <div class="install-dialog" role="dialog" aria-modal="true" aria-labelledby="installModalTitle">
+        <button type="button" class="install-close" data-close-install aria-label="${esc(t('closeModal'))}">&times;</button>
+        <h2 class="install-title" id="installModalTitle">${esc(t('installModalTitle'))}</h2>
+        <hr class="install-rule" aria-hidden="true">
+        <p class="install-intro">${intro}</p>
+        <ol class="install-steps">${steps}</ol>
+        ${note ? `<p class="install-note">${ICONS.bell}<span>${note}</span></p>` : ''}
+      </div>`;
+    $$('[data-close-install]', modal).forEach((el) =>
+      el.addEventListener('click', closeInstallModal));
+  }
+
+  function installModalKeydown(e) {
+    if (e.key === 'Escape') { closeInstallModal(); return; }
+    if (e.key === 'Tab') {
+      /* foco circula dentro do diálogo */
+      const focusables = $$('.install-dialog button, .install-dialog a', $('#installModal'));
+      if (!focusables.length) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  }
+
+  function openInstallModal(mode, fromPush) {
+    installModalMode = mode;
+    installModalFromPush = !!fromPush;
+    installModalTrigger = document.activeElement;
+    renderInstallModal();
+    $('#installModal').hidden = false;
+    document.body.classList.add('modal-open');
+    const closeBtn = $('#installModal .install-close');
+    if (closeBtn) closeBtn.focus();
+    document.addEventListener('keydown', installModalKeydown);
+  }
+
+  function closeInstallModal() {
+    const modal = $('#installModal');
+    if (!modal || modal.hidden) return;
+    modal.hidden = true;
+    modal.innerHTML = '';
+    installModalMode = null;
+    installModalFromPush = false;
+    document.body.classList.remove('modal-open');
+    document.removeEventListener('keydown', installModalKeydown);
+    if (installModalTrigger && installModalTrigger.focus) installModalTrigger.focus();
+    installModalTrigger = null;
+  }
+
+  /* ============================================================
      ONESIGNAL (push) — só ativa com App ID configurado
+     ------------------------------------------------------------
+     UM ÚNICO service worker: o OneSignal é apontado para o MESMO
+     sw.js do PWA (que já importa OneSignalSDK.sw.js), no escopo
+     /amdrio26/ — nenhum segundo worker é registrado e o offline
+     permanece intacto. Se o SDK não carregar (sem rede), o botão
+     simplesmente não aparece e o site segue 100% funcional.
      ============================================================ */
   function initPush() {
     const btn = $('#btnPush');
-    if (!SITE_CONFIG.oneSignalAppId || SITE_CONFIG.oneSignalAppId.indexOf('COLE_') === 0) {
-      btn.hidden = true; // aparece após configurar o App ID (ver README-SETUP.md)
+    const appId = SITE_CONFIG.oneSignalAppId;
+    const configured = typeof appId === 'string' && appId.length > 0 && appId.indexOf('COLE_') === -1;
+    if (!configured) {
+      btn.hidden = true; // aparece após configurar o App ID (ver README-PUSH.md)
       return;
     }
+
+    /* iOS sem estar instalado: Web Push só existe no app instalado
+       (iOS 16.4+). O botão abre o modal de instalação — instala
+       primeiro; as notificações vêm depois, dentro do app. */
+    if (IS_IOS && !IS_STANDALONE) {
+      btn.hidden = false;
+      btn.addEventListener('click', () => {
+        openInstallModal(IS_IOS_SAFARI ? 'ios' : 'ios-other', true);
+      });
+      return;
+    }
+
     const sdk = document.createElement('script');
     sdk.src = 'https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js';
     sdk.defer = true;
@@ -794,51 +948,90 @@
     window.OneSignalDeferred = window.OneSignalDeferred || [];
     window.OneSignalDeferred.push(async function (OneSignal) {
       await OneSignal.init({
-        appId: SITE_CONFIG.oneSignalAppId,
-        serviceWorkerPath: 'OneSignalSDKWorker.js',
-        serviceWorkerParam: { scope: './push/' },
+        appId: appId,
+        serviceWorkerParam: { scope: '/amdrio26/' },
+        serviceWorkerPath: 'amdrio26/sw.js',
+        serviceWorkerUpdaterPath: 'amdrio26/sw.js',
         allowLocalhostAsSecureOrigin: true,
       });
-      if (OneSignal.Notifications.permission) {
-        btn.classList.add('is-on');
-        $('.btn-label', btn).textContent = t('pushGranted');
-      }
+
+      /* reflete o estado real no botão (ativado / bloqueado / neutro) */
+      const reflect = () => {
+        const native = (typeof Notification !== 'undefined') ? Notification.permission : 'default';
+        if (OneSignal.Notifications.permission) pushState = 'on';
+        else if (native === 'denied') pushState = 'blocked';
+        else pushState = 'idle';
+        btn.classList.toggle('is-on', pushState === 'on');
+        $('.btn-label', btn).textContent =
+          t(pushState === 'on' ? 'pushGranted' : pushState === 'blocked' ? 'pushDenied' : 'pushBtn');
+      };
+      reflect();
+      btn.hidden = false; // só aparece com SDK pronto — offline nada quebra
+
       btn.addEventListener('click', async () => {
-        try {
-          await OneSignal.Notifications.requestPermission();
-          if (OneSignal.Notifications.permission) {
-            btn.classList.add('is-on');
-            $('.btn-label', btn).textContent = t('pushGranted');
-            toast(t('pushGranted'));
-          } else {
-            toast(t('pushDenied'));
-          }
-        } catch (e) { toast(t('pushDenied')); }
+        try { await OneSignal.Notifications.requestPermission(); }
+        catch (e) { /* estado é refletido a seguir */ }
+        reflect();
+        toast(t(pushState === 'on' ? 'pushGranted' : 'pushDenied'));
       });
+      try {
+        OneSignal.Notifications.addEventListener('permissionChange', reflect);
+      } catch (e) { /* SDK antigo sem o evento: sem prejuízo */ }
     });
   }
 
   /* ============================================================
-     PWA: service worker + instalação
+     PWA: service worker + fluxo de instalação por plataforma
+     ------------------------------------------------------------
+     - Já instalado (standalone): botão oculto.
+     - Android/Chrome/Edge: beforeinstallprompt → prompt() nativo;
+       sem o evento, modal com instruções do menu ⋮.
+     - iOS Safari: modal ilustrado "Compartilhar → Adicionar à
+       Tela de Início → Adicionar".
+     - iOS fora do Safari: modal "abra no Safari".
+     - Desktop sem prompt: botão permanece oculto (nada quebrado).
      ============================================================ */
   function initPWA() {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js').catch(() => {});
     }
     const btn = $('#btnInstall');
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredInstall = e;
-      btn.hidden = false;
-    });
+
+    if (IS_STANDALONE) {
+      btn.hidden = true;                    // já instalado
+    } else if (IS_IOS || IS_ANDROID) {
+      btn.hidden = false;                   // celular: sempre visível
+    }
+    /* desktop: aparece apenas se o navegador oferecer o prompt nativo
+       (o beforeinstallprompt é capturado no topo do script) */
+    if (deferredInstall && !IS_STANDALONE) btn.hidden = false;
+
     btn.addEventListener('click', async () => {
-      if (!deferredInstall) return;
-      deferredInstall.prompt();
-      await deferredInstall.userChoice;
-      deferredInstall = null;
-      btn.hidden = true;
+      if (deferredInstall) {                 // Android/Chrome/Edge: prompt nativo
+        deferredInstall.prompt();
+        const choice = await deferredInstall.userChoice;
+        deferredInstall = null;
+        if (choice && choice.outcome === 'accepted') btn.hidden = true;
+        return;
+      }
+      if (IS_IOS) openInstallModal(IS_IOS_SAFARI ? 'ios' : 'ios-other', false);
+      else if (IS_ANDROID) openInstallModal('android', false);
     });
-    window.addEventListener('appinstalled', () => { btn.hidden = true; });
+
+    window.addEventListener('appinstalled', () => {
+      btn.hidden = true;
+      deferredInstall = null;
+      closeInstallModal();
+      toast(t('appInstalled'));
+    });
+
+    /* se o modo de exibição virar standalone, o botão some */
+    if (window.matchMedia) {
+      const mq = window.matchMedia('(display-mode: standalone)');
+      const onChange = (ev) => { if (ev.matches) btn.hidden = true; };
+      if (mq.addEventListener) mq.addEventListener('change', onChange);
+      else if (mq.addListener) mq.addListener(onChange);
+    }
   }
 
   /* ---------- compartilhar ---------- */

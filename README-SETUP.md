@@ -74,22 +74,17 @@ O passo a passo completo (com a explicação de cada coluna) está em
 
 ## 3. OneSignal (avisos push) — ~10 minutos
 
-1. Crie conta gratuita em https://onesignal.com → **New App/Website**.
-2. Escolha **Web** → *Typical Site*.
-   - Site Name: `AMD Rio 26`
-   - Site URL: `https://viaveritasvita.github.io` (com HTTPS)
-   - **Importante:** em *Advanced → Service Workers*, informe:
-     - Path to service worker files: `/amdrio26/`
-     - Main/Updater service worker: `OneSignalSDKWorker.js`
-     - Service worker scope: `/amdrio26/push/`
-3. Copie o **App ID** (Settings → Keys & IDs) e cole em `data.js` →
-   `SITE_CONFIG.oneSignalAppId`. Commit + push.
-4. Pronto: o botão **"Receber avisos"** passa a aparecer no site e pede permissão.
-5. Para disparar um aviso: painel do OneSignal → **Messages → New Push**.
+> **O guia completo e atualizado está em `README-PUSH.md`** (passo a passo no
+> painel do OneSignal, configuração do service worker único `sw.js` no escopo
+> `/amdrio26/` e roteiro de teste em Android e iPhone). Siga aquele arquivo —
+> ele substitui as instruções antigas que ficavam nesta seção.
 
-> Os arquivos exigidos pelo OneSignal já estão no repositório:
-> `OneSignalSDKWorker.js` (worker dedicado) e o `sw.js` também importa o worker
-> do OneSignal para coexistir com o modo offline.
+Resumo: criar app Web Push no OneSignal → *Typical Site* com a URL
+`https://viaveritasvita.github.io/amdrio26/` → em *Advanced → Service Workers*
+apontar TUDO para o `sw.js` do site (escopo `/amdrio26/`) → copiar o **App ID**
+para `data.js` → `SITE_CONFIG.oneSignalAppId` → commit + push + subir a versão
+do cache no `sw.js`. Enquanto o App ID for placeholder, o botão
+**"Receber avisos"** fica oculto automaticamente.
 
 ## 4. WhatsApp (disparo garantido)
 
@@ -162,7 +157,7 @@ Red Branch of Eri, Order of St Patrick, Secret Monitor, Allied Masonic Degrees.
 | `app.js` | Motor: idiomas, "Agora/A seguir", abas, roteiro, .ics, avisos, push, PWA |
 | `manifest.json` | Instalação como app (nome, ícones, cores) |
 | `sw.js` | Offline (cache do app shell) + importa worker do OneSignal |
-| `OneSignalSDKWorker.js` | Worker dedicado do OneSignal |
+| `OneSignalSDKWorker.js` | Legado (não é mais usado: o OneSignal aponta para o próprio `sw.js`) |
 | `avisos.json` | Avisos in-page (fallback quando a planilha não está configurada/disponível) |
 | `assets/agenda-amdrio26.ics` | Agenda completa **estática** (assinatura no Google Agenda) — regerar sempre que a grade de `data.js` mudar |
 | `assets/icon.svg` / `icon-maskable.svg` | Ícones do PWA |

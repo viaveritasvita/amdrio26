@@ -396,7 +396,8 @@ main::before {
 }
 
 /* ---------- barra de ações — centrada mesmo ao quebrar linha ---------- */
-#btnPush { display: none; }
+/* #btnPush: visibilidade controlada pelo app.js (atributo hidden):
+   aparece só com o App ID do OneSignal configurado em data.js. */
 #btnShare { padding: 0.25rem 0.55rem; }
 #btnShare .btn-label { display: none; }
 .actions {
@@ -920,6 +921,96 @@ footer {
   max-width: min(90vw, 26rem); text-align: center;
 }
 .toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
+
+/* ============================================================
+   MODAL DE INSTALAÇÃO (iOS / Android) — marfim, filete dourado
+   Conteúdo preenchido pelo app.js conforme a plataforma.
+   ============================================================ */
+body.modal-open { overflow: hidden; }
+
+.install-modal {
+  position: fixed; inset: 0; z-index: 90;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1rem;
+}
+.install-modal[hidden] { display: none; }
+
+.install-overlay {
+  position: absolute; inset: 0;
+  background: rgba(6, 13, 28, 0.55);
+}
+
+.install-dialog {
+  position: relative;
+  width: min(100%, 26rem);
+  max-height: min(86vh, 42rem); overflow-y: auto;
+  background: var(--ivory);
+  border: 1px solid var(--gold-line);
+  border-top: 3px solid var(--gold);
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(6, 13, 28, 0.35);
+  padding: 1.25rem 1.2rem 1.35rem;
+}
+
+.install-close {
+  position: absolute; top: 0.55rem; right: 0.55rem;
+  width: 44px; height: 44px; min-width: 44px;
+  background: none; border: 1px solid var(--gold-line); border-radius: 50%;
+  color: var(--gold-aged); font-size: 1.45rem; line-height: 1;
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.install-close:hover { background: var(--gold-faint); }
+
+.install-title {
+  margin: 0.2rem 2.8rem 0 0;
+  font-family: var(--font-display);
+  font-size: 1.18rem; font-weight: 700; letter-spacing: 0.04em;
+  color: var(--navy-900);
+}
+.install-rule {
+  height: 1px; border: 0; margin: 0.65rem 0 0.9rem;
+  background: linear-gradient(90deg, var(--gold-line), transparent);
+}
+.install-intro { margin: 0 0 1rem; font-size: 0.98rem; line-height: 1.5; color: var(--ink-soft); }
+.install-intro strong, .install-steps strong, .install-note strong { color: var(--navy-900); }
+
+.install-steps {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: 0.85rem;
+  counter-reset: step;
+}
+.install-steps li {
+  display: flex; align-items: flex-start; gap: 0.8rem;
+  counter-increment: step;
+}
+.install-step-icon {
+  position: relative; flex: none;
+  width: 46px; height: 46px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--paper); color: var(--gold-aged);
+  border: 1px solid var(--gold-line); border-radius: 12px;
+  box-shadow: var(--shadow-card);
+}
+.install-step-icon svg { width: 23px; height: 23px; }
+.install-step-icon::after {
+  content: counter(step);
+  position: absolute; top: -7px; left: -7px;
+  width: 19px; height: 19px; border-radius: 50%;
+  background: var(--navy-900); color: var(--gold-bright);
+  font-size: 0.68rem; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+}
+.install-steps p { margin: 0.2rem 0 0; font-size: 0.97rem; line-height: 1.45; color: var(--ink); }
+
+.install-note {
+  display: flex; align-items: flex-start; gap: 0.55rem;
+  margin: 1.05rem 0 0; padding: 0.7rem 0.85rem;
+  background: var(--gold-faint);
+  border: 1px solid var(--gold-line); border-radius: 10px;
+  font-size: 0.93rem; line-height: 1.45; color: var(--ink-soft);
+}
+.install-note svg { flex: none; width: 1rem; height: 1rem; fill: var(--gold-aged); margin-top: 0.15rem; }
 
 /* ============================================================
    FOCO VISÍVEL (acessibilidade)

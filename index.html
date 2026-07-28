@@ -114,9 +114,6 @@
       </span>
     </div>
 
-    <!-- Legenda de cores por rito (recolhível, preenchida via app.js) -->
-    <details id="bodyLegend" class="body-legend"></details>
-
     <!-- Abas por dia -->
     <nav id="dayTabs" class="day-tabs" role="tablist"></nav>
 
@@ -158,11 +155,6 @@
       <span id="footerMotto2">Por uma Maçonaria forte e unida</span>
     </p>
 
-    <!-- assinatura da marca (link reservado para o futuro site) -->
-    <p class="brand-signature">
-      <a href="#" rel="noopener"><span class="brand-name">ViaVeritasVita</span><span class="brand-dot" aria-hidden="true">·</span><span id="brandTagline">conheça nossa estrutura de apoio à Maçonaria</span></a>
-    </p>
-
     <div class="footer-emg">
       <div class="contact-item">
         <h3 id="emgLabelFoot">Emergências</h3>
@@ -171,6 +163,11 @@
     </div>
 
     <p id="footerNote" class="footer-note">Aplicativo oficial do encontro · funciona offline</p>
+
+    <!-- assinatura da marca (link reservado para o futuro site) — bem no fim da página -->
+    <p class="brand-signature">
+      <a href="#" rel="noopener"><span class="brand-name">ViaVeritasVita</span><span class="brand-dot" aria-hidden="true">·</span><span id="brandTagline">conheça nossa estrutura de apoio à Maçonaria</span></a>
+    </p>
   </footer>
 
   <!-- Botão flutuante de emergência (tel:) -->
@@ -178,6 +175,9 @@
     <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.7 1.8c.4-.4 1-.4 1.4 0l1.7 1.7c.4.4.4 1 0 1.4l-.9.9c.5 1.1 2.2 2.8 3.3 3.3l.9-.9c.4-.4 1-.4 1.4 0l1.7 1.7c.4.4.4 1 0 1.4l-1 1c-.6.6-1.6.8-2.5.4-3-1.2-6.2-4.4-7.4-7.4-.4-.9-.2-1.9.4-2.5l1-1z"/></svg>
     <span class="fab-label" id="fabLabel">Emergências</span>
   </a>
+
+  <!-- Modal de instalação (iOS / Android) — conteúdo preenchido pelo app.js -->
+  <div id="installModal" class="install-modal" hidden></div>
 
   <!-- Toast -->
   <div id="toast" class="toast" role="status" aria-live="polite"></div>

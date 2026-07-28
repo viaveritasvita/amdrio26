@@ -66,6 +66,25 @@ const I18N = {
     pushDenied: 'Avisos bloqueados no navegador',
     whatsappBtn: 'Avisos no WhatsApp',
     installBtn: 'Instalar app',
+
+    /* fluxo de instalação (modal iOS / Android) — trechos entre **asteriscos**
+       aparecem em negrito no modal */
+    installModalTitle: 'Instalar o aplicativo',
+    installIntroIOS: 'No iPhone e no iPad, a instalação é feita pelo Safari, em três passos:',
+    iosStep1: 'Toque no ícone **Compartilhar** na barra do Safari.',
+    iosStep2: 'Role a lista e toque em **“Adicionar à Tela de Início”**.',
+    iosStep3: 'Confirme em **Adicionar** e abra o aplicativo pelo novo ícone na tela de início.',
+    iosPushNote: 'No iPhone, as notificações só funcionam depois de instalar assim.',
+    pushAfterInstall: 'Para receber avisos no iPhone, instale o aplicativo primeiro — as notificações são ativadas depois, dentro do aplicativo instalado.',
+    iosOtherIntro: 'Neste aparelho, somente o **Safari** consegue instalar o aplicativo.',
+    iosOtherStep1: 'Abra o **Safari** e visite **{url}**.',
+    iosOtherStep2: 'Lá, toque em **“Instalar app”** para ver o passo a passo.',
+    androidIntro: 'Se o convite de instalação não apareceu, instale pelo menu do navegador:',
+    androidStep1: 'Toque no menu **⋮** no canto do navegador.',
+    androidStep2: 'Toque em **“Instalar aplicativo”** (ou **“Adicionar à tela inicial”**) e confirme.',
+    closeModal: 'Fechar',
+    appInstalled: 'Aplicativo instalado',
+
     shareBtn: 'Compartilhar',
     shareText: 'Programa Oficial — AMD · RCC · OSM · Rio de Janeiro, 27–30 de agosto de 2026',
     linkCopied: 'Link copiado',
@@ -141,6 +160,25 @@ const I18N = {
     pushDenied: 'Avis bloqués par le navigateur',
     whatsappBtn: 'Avis sur WhatsApp',
     installBtn: 'Installer l’application',
+
+    /* parcours d’installation (fenêtre iOS / Android) — les passages entre
+       **astérisques** apparaissent en gras */
+    installModalTitle: 'Installer l’application',
+    installIntroIOS: 'Sur iPhone et iPad, l’installation se fait via Safari, en trois étapes :',
+    iosStep1: 'Touchez l’icône **Partager** dans la barre de Safari.',
+    iosStep2: 'Faites défiler la liste et touchez **« Sur l’écran d’accueil »**.',
+    iosStep3: 'Confirmez avec **Ajouter**, puis ouvrez l’application depuis la nouvelle icône de l’écran d’accueil.',
+    iosPushNote: 'Sur iPhone, les notifications ne fonctionnent qu’après cette installation.',
+    pushAfterInstall: 'Pour recevoir les avis sur iPhone, installez d’abord l’application — les notifications s’activent ensuite, dans l’application installée.',
+    iosOtherIntro: 'Sur cet appareil, seul **Safari** peut installer l’application.',
+    iosOtherStep1: 'Ouvrez **Safari** et visitez **{url}**.',
+    iosOtherStep2: 'Là, touchez **« Installer l’application »** pour voir les étapes.',
+    androidIntro: 'Si l’invitation d’installation n’est pas apparue, installez via le menu du navigateur :',
+    androidStep1: 'Touchez le menu **⋮** dans le coin du navigateur.',
+    androidStep2: 'Touchez **« Installer l’application »** (ou **« Ajouter à l’écran d’accueil »**) et confirmez.',
+    closeModal: 'Fermer',
+    appInstalled: 'Application installée',
+
     shareBtn: 'Partager',
     shareText: 'Programme Officiel — AMD · RCC · OSM · Rio de Janeiro, 27–30 août 2026',
     linkCopied: 'Lien copié',
@@ -216,6 +254,25 @@ const I18N = {
     pushDenied: 'Alerts blocked by the browser',
     whatsappBtn: 'WhatsApp alerts',
     installBtn: 'Install app',
+
+    /* install flow (iOS / Android modal) — text between **asterisks**
+       is rendered in bold */
+    installModalTitle: 'Install the app',
+    installIntroIOS: 'On iPhone and iPad, installation is done through Safari, in three steps:',
+    iosStep1: 'Tap the **Share** icon in the Safari toolbar.',
+    iosStep2: 'Scroll the list and tap **“Add to Home Screen”**.',
+    iosStep3: 'Confirm with **Add**, then open the app from the new icon on your home screen.',
+    iosPushNote: 'On iPhone, notifications only work after installing this way.',
+    pushAfterInstall: 'To receive alerts on iPhone, install the app first — notifications are enabled afterwards, inside the installed app.',
+    iosOtherIntro: 'On this device, only **Safari** can install the app.',
+    iosOtherStep1: 'Open **Safari** and visit **{url}**.',
+    iosOtherStep2: 'There, tap **“Install app”** to see the steps.',
+    androidIntro: 'If the install invitation did not appear, install from the browser menu:',
+    androidStep1: 'Tap the **⋮** menu in the corner of the browser.',
+    androidStep2: 'Tap **“Install app”** (or **“Add to Home screen”**) and confirm.',
+    closeModal: 'Close',
+    appInstalled: 'App installed',
+
     shareBtn: 'Share',
     shareText: 'Official Programme — AMD · RCC · OSM · Rio de Janeiro, August 27–30, 2026',
     linkCopied: 'Link copied',
