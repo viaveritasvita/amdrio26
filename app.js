@@ -197,12 +197,16 @@
   }
 
   function renderStaticTexts() {
-    $('#programTitle').textContent = t('programTitle');
+    /* Título com a ÚLTIMA palavra em dourado (Oficial / Officiel /
+       Programme): string própria do i18n.js — innerHTML seguro aqui. */
+    $('#programTitle').innerHTML = t('programTitle')
+      .replace(/(\S+)\s*$/, '<span class="title-accent">$1</span>');
     $('#datesPlaque').textContent = t('datesPlaque');
     // O lema saiu do cabeçalho (layout compacto) e vive apenas no rodapé
     $('#footerMotto1').textContent = t('motto1');
     $('#footerMotto2').textContent = t('motto2');
     $('#footerNote').textContent = t('footerNote');
+    $('#brandTagline').textContent = t('brandTagline');
     $('#locationsTitle').textContent = t('locationsTitle');
     $('#locationsSub').textContent = t('locationsSub');
     $('#contactTitle').textContent = t('contactTitle');

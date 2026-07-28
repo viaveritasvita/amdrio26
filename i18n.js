@@ -78,6 +78,8 @@ const I18N = {
 
     offlineReady: 'Disponível offline',
     footerNote: 'Aplicativo oficial do encontro · funciona offline',
+    /* "ViaVeritasVita" é nome próprio (não se traduz) */
+    brandTagline: 'conheça nossa estrutura de apoio à Maçonaria',
   },
 
   fr: {
@@ -151,6 +153,8 @@ const I18N = {
 
     offlineReady: 'Disponible hors ligne',
     footerNote: 'Application officielle de la rencontre · fonctionne hors ligne',
+    /* « ViaVeritasVita » est un nom propre (ne se traduit pas) */
+    brandTagline: 'découvrez notre structure de soutien à la Franc-maçonnerie',
   },
 
   en: {
@@ -224,5 +228,7 @@ const I18N = {
 
     offlineReady: 'Available offline',
     footerNote: 'Official app of the gathering · works offline',
+    /* "ViaVeritasVita" is a proper name (never translated) */
+    brandTagline: 'discover our structure in support of Freemasonry',
   },
 };

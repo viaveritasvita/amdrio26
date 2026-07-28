@@ -126,12 +126,13 @@ svg { display: block; }
   overflow: hidden;
   text-align: center;
 }
-/* gravura do Rio esfumaçada — line-art em marinho, quase imperceptível */
+/* gravura do Rio (arte do conceito) em linha dourada — bem sutil,
+   atrás do brasão/título, sem repetir e sem atrapalhar a leitura */
 .masthead::before {
   content: '';
   position: absolute; inset: 0; z-index: -1;
-  background: url('assets/rio-watermark.svg') center top / cover no-repeat;
-  opacity: 0.06;
+  background: url('assets/rio-gravura.svg') center 40% / cover no-repeat;
+  opacity: 0.08;
   pointer-events: none;
 }
 
@@ -172,6 +173,27 @@ svg { display: block; }
 }
 .masthead-titles { min-width: 0; text-align: center; }
 
+/* linha "AMD · RCC · OSM" em versalete dourado, entre filetes finos
+   (gesto de assinatura do conceito), logo acima do título */
+.masthead-sigla {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.65rem;
+  margin: 0 0 0.4rem;
+}
+.masthead-sigla::before, .masthead-sigla::after {
+  content: ''; flex: 1; max-width: 3.6rem; height: 1px;
+}
+.masthead-sigla::before { background: linear-gradient(90deg, transparent, var(--gold-line)); }
+.masthead-sigla::after { background: linear-gradient(270deg, transparent, var(--gold-line)); }
+.masthead-sigla span {
+  white-space: nowrap;
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(0.6rem, 2.4vw, 0.72rem);
+  letter-spacing: 0.28em; text-indent: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold-aged);
+}
+
 @media (max-width: 599px) {
   .medallion { --medal-w: clamp(115px, 31vw, 156px); }
 }
@@ -184,6 +206,9 @@ svg { display: block; }
   color: var(--navy-900);
   text-wrap: balance;
 }
+/* última palavra do título ("Oficial") no dourado envelhecido do conceito
+   (--ouro-tinta do conceito = #8a6828 = --gold-aged; AA sobre marfim) */
+.masthead h1 .title-accent { color: var(--gold-aged); }
 
 /* plaqueta de datas — placa marinho do crachá, com filetes-flourish
    e pontas em losango dourado nas laterais */
@@ -240,20 +265,15 @@ main {
   margin: 0 auto;
   padding: 0 1rem 6.5rem;
 }
-/* um único motif do Rio (Cristo) no respiro lateral — aparece apenas
-   quando há margem sobrando de verdade; nunca atrás do texto */
+/* ondas de Copacabana (padrão do conceito) — textura MUITO sutil por
+   trás do corpo da página; os cartões brancos cobrem a textura, então
+   ela só respira nos vãos de marfim (legibilidade preservada) */
 main::before {
-  content: ''; position: absolute; z-index: -1;
-  display: none;
-  background: url('assets/motif-cristo.svg') no-repeat center / contain;
+  content: ''; position: absolute; inset: 0; z-index: -1;
+  background: url('assets/ondas-copacabana.svg') repeat center top;
+  background-size: 220px auto;
+  opacity: 0.045;
   pointer-events: none;
-}
-@media (min-width: 1200px) {
-  main::before {
-    display: block;
-    top: 22rem; right: -14rem;
-    width: 205px; height: 174px;
-  }
 }
 
 /* ---------- cartão AGORA / A SEGUIR ---------- */
@@ -738,16 +758,6 @@ main::before {
    LOCAIS
    ============================================================ */
 #locations { position: relative; }
-/* massa de ondas de Copacabana afunilada — fecho da composição, no
-   respiro entre o conteúdo e o rodapé (opacidade embutida no SVG) */
-#locations::after {
-  content: ''; position: absolute; z-index: -1;
-  bottom: -6rem; left: 50%;
-  transform: translateX(-50%);
-  width: min(340px, 86vw); height: 230px;
-  background: url('assets/motif-ondas.svg') no-repeat center bottom / contain;
-  pointer-events: none;
-}
 .section-header { text-align: center; margin: 2.6rem 0 1.4rem; }
 .section-header h2 {
   margin: 0 0 0.2rem;
@@ -838,6 +848,24 @@ footer {
   margin-top: 0.2rem;
   font-size: 0.92rem; font-style: italic; font-weight: 500; color: var(--cream-dim);
 }
+/* assinatura da marca — versalete dourado, discreta, abaixo do lema */
+.brand-signature { margin: 1.15rem 0 0; }
+.brand-signature a {
+  display: inline-flex; flex-wrap: wrap; align-items: baseline; justify-content: center;
+  gap: 0 0.5rem;
+  padding: 0.2rem 0.4rem; /* área de toque/foco confortável */
+  text-decoration: none;
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 0.62rem; letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(201, 162, 75, 0.85);
+  transition: color 0.2s;
+}
+.brand-signature .brand-name { letter-spacing: 0.3em; color: var(--gold); }
+.brand-signature .brand-dot { color: rgba(201, 162, 75, 0.55); }
+.brand-signature a:hover,
+.brand-signature a:hover .brand-name { color: var(--gold-bright); }
+
 .footer-emg {
   margin: 1.3rem auto 0; max-width: 22rem;
   border: 1px solid rgba(201, 162, 75, 0.5); border-radius: var(--radius);

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" width="240" height="140" aria-hidden="true">
+  <!-- Ondas do calçadão de Copacabana (padrão do conceito ViaVeritasVita),
+       ladrilho horizontal sem emenda (tangentes contínuas nas bordas).
+       Dourado envelhecido; a opacidade final fica no CSS (main::before). -->
+  <g fill="none" stroke="#9a7b2e" stroke-width="1.2" stroke-linecap="round">
+    <path d="M0 40C20 20 40 20 60 40S100 60 120 40 160 20 180 40 220 60 240 40"/>
+    <path d="M0 104C20 124 40 124 60 104S100 84 120 104 160 124 180 104 220 84 240 104"/>
+  </g>
+</svg>

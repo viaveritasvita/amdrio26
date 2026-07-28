@@ -20,7 +20,7 @@ try {
   /* sem rede na instalação: apenas offline, sem push */
 }
 
-const CACHE = 'amdrio26-v16';
+const CACHE = 'amdrio26-v17';
 
 const APP_SHELL = [
   './',
@@ -39,9 +39,9 @@ const APP_SHELL = [
   './assets/medalhao.png',
   './assets/medallion.svg',
   './assets/skyline.svg',
-  './assets/rio-watermark.svg',
-  './assets/motif-cristo.svg',
-  './assets/motif-ondas.svg',
+  /* gravura do Rio (fundo do topo) + ondas de Copacabana (fundo do corpo) */
+  './assets/rio-gravura.svg',
+  './assets/ondas-copacabana.svg',
   './assets/divider-wave.svg',
   'https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,500&display=swap',
 ];
