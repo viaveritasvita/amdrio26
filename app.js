@@ -127,7 +127,12 @@
   function mapUrl(locKey) {
     const loc = LOCATIONS[locKey];
     if (!loc) return null;
-    return loc.map || ('https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(loc.name + ', ' + loc.address));
+    // Formato oficial do Google Maps (abre o app no celular, Maps no desktop).
+    // Links share.google/... são pouco confiáveis, então usamos o endereço.
+    const query = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(loc.name + ', ' + loc.address);
+    // Só reusa loc.map se for uma URL de Google Maps de verdade.
+    if (loc.map && /google\.[a-z.]+\/maps/.test(loc.map)) return loc.map;
+    return query;
   }
 
   /* ---------- Google Agenda (link pré-preenchido) ----------
